@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <title id="idtu"></title>
 <body>
 
-<h1>No hay nada</h1>
+<style>
+
+#idmig{
+position:absolute;
+
+top: 50%;
+left: 50%;
+width: 350px;
+height: 250px;
+z-index: 2;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+background-color: blanchedalmond;
 
 
-<button onclick="myFunctionw()">Click me</button>
 
-<p id="demo"></p>
+}
+#idt{
+
+  position: absolute;
+  top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: black;
+  
+}
+
+
+.myButton {
+
+  position: absolute;
+  top: 50%;
+left: 50%;
+
+
+  
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+
+
+
+	background-color:#44c76752;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+  z-index: 3;
+
+  text-align: center;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+</style>
+<div id="idt">
+  <img id="idmig" src="https://i.pinimg.com/originals/ac/d6/c5/acd6c58a00e5e101e522fb25dc3500f1.gif"  alt="">
+  
+  <button class="myButton" onclick="myFunctionw()">Ok</button>
+
+</div>
+
+
+
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-
-  var valor = obtenerValorParametro('parametro2');
-  if (valor){
-  
-
-    function fpermitedescarga(urlglb,nombreglb){
-  
-  
-  fetch(urlglb+nombreglb)
-  .then(resp => resp.blob())
-  .then(blob => {
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.style.display = 'none';
-  a.href = url;
-  // the filename you want
-  a.download = nombreglb;
-  document.body.appendChild(a);
-  a.click();
-  window.URL.revokeObjectURL(url);
-  alert('your file has downloaded!'); // or you know, something with better UX...
-  })
-  .catch(() => alert('oh no!'));
-  
-  
-  }
-var uncalor=valor+"/";
-
-
-
-yasepuede=fpermitedescarga(uncalor,"cubo12.glb");
-
-
-
- 
-
-
-
-
-  }else{
-    alert("noooo");
-  }
-
-}
-
-
-function obtenerValorParametro(sParametroNombre) {
-var sPaginaURL = window.location.search.substring(0);
- var sURLVariables = sPaginaURL.split('&');
-  for (var i = 0; i < sURLVariables.length; i++) {
-    var sParametro = sURLVariables[i].split('=');
-    if (sParametro[0] == sParametroNombre) {
-      return sParametro[1];
-    }
-  }
- return null;
-}
-
-var yasepuede=false;
-
-
-
-
-myFunction();
-
-function myFunctionw(){
-
-  window.history.back();
-}
-
+var _0x405f=['o\x20a=[\x22\x5cq\x5cf\x5cj\x5cf\x5cw\x5cb\x5cc\x5cj\x5cd\x5c1a\x22,\x22\x5cl\x5ce\x5ce\x5cb\x5cj\x5c1w\x5c1l\x5c1m\x5cA\x22,\x22\x5cl\x5ci\x5cc\x5cv\x22,\x22\x5cC\x5cb\x5cc\x5cZ\x5ch\x5cb\x5cw\x5cb\x5ce\x5cc\x5c1o\x5cp\x5c1q\x5ci\x22,\x22\x5c1b\x5cd\x5cT\x5cb\x5ce\x5cf\x5ce\x5cc\x5c1p\x5c1r\x5ci\x22,\x22\x5cd\x5cm\x5cB\x5ce\x5cd\x5cS\x22,\x22\x5cg\x5cf\x5cc\x5cg\x5cm\x22,\x22\x5cg\x5cj\x5cb\x5cf\x5cc\x5cb\x5c1d\x5ck\x5c1f\x5cb\x5cg\x5cc\x5cF\x5cE\x5cA\x22,\x22\x5cF\x5cE\x5cA\x22,\x22\x5cf\x22,\x22\x5cg\x5cj\x5cb\x5cf\x5cc\x5cb\x5cZ\x5ch\x5cb\x5cw\x5cb\x5ce\x5cc\x22,\x22\x5ci\x5cl\x5cn\x5cq\x5ch\x5cf\x5cp\x22,\x22\x5cn\x5cc\x5cp\x5ch\x5cb\x22,\x22\x5ce\x5cd\x5ce\x5cb\x22,\x22\x5cm\x5cj\x5cb\x5cM\x22,\x22\x5ci\x5cd\x5cs\x5ce\x5ch\x5cd\x5cf\x5ci\x22,\x22\x5cf\x5cq\x5cq\x5cb\x5ce\x5ci\x5c1b\x5cm\x5cl\x5ch\x5ci\x22,\x22\x5ck\x5cd\x5ci\x5cp\x22,\x22\x5cg\x5ch\x5cl\x5cg\x5cy\x22,\x22\x5cj\x5cb\x5cT\x5cd\x5cy\x5cb\x5c1d\x5ck\x5c1f\x5cb\x5cg\x5cc\x5cF\x5cE\x5cA\x22,\x22\x5cp\x5cd\x5cv\x5cj\x5cB\x5cM\x5cl\x5ch\x5cb\x5cB\x5cm\x5cf\x5cn\x5cB\x5ci\x5cd\x5cs\x5ce\x5ch\x5cd\x5cf\x5ci\x5cb\x5ci\x5cS\x22,\x22\x5cc\x5cm\x5cb\x5ce\x22,\x22\x5ck\x5ch\x5cd\x5ck\x22,\x22\x5cz\x22,\x22\x5cg\x5cv\x5ck\x5cd\x5c1n\x5c1a\x5cK\x5cC\x5ch\x5ck\x22,\x22\x5ch\x5cd\x5cg\x5cf\x5cc\x5cl\x5cd\x5ce\x22,\x22\x5cm\x5cc\x5cc\x5cq\x5cn\x5c1u\x5cz\x5cz\x5cs\x5cs\x5cs\x5cK\x5cM\x5cf\x5cg\x5cb\x5ck\x5cd\x5cd\x5cy\x5cK\x5cg\x5cd\x5cw\x5cz\x22,\x22\x5cn\x5cv\x5ck\x5cn\x5cc\x5cj\x5cl\x5ce\x5cC\x22,\x22\x5cn\x5cb\x5cf\x5cj\x5cg\x5cm\x22,\x22\x5c1t\x22,\x22\x5cn\x5cq\x5ch\x5cl\x5cc\x22,\x22\x5ch\x5cb\x5ce\x5cC\x5cc\x5cm\x22,\x22\x5c1s\x22,\x22\x5ck\x5cf\x5cg\x5cy\x22,\x22\x5cm\x5cl\x5cn\x5cc\x5cd\x5cj\x5cp\x22];x\x20U(){o\x20I=1h(a[0]);Y(I){J[a[3]](a[2])[a[1]]=a[4];x\x201k(N,H){1L(N+H)[a[P]]((O)=>O[a[1K]]())[a[P]]((Q)=>{R\x20L=t[a[8]][a[7]](Q);R\x20r=J[a[10]](a[9]);r[a[12]][a[11]]=a[13];r[a[14]]=L;r[a[15]]=H;J[a[17]][a[16]](r);r[a[18]]();t[a[8]][a[19]](L);1e(a[1y])})[a[6]](()=>1e(a[5]))}o\x201i=I+a[1G];V=1k(1i,a[1N])}1z{t[a[1g]]=a[1A]}}x\x201h(X){o\x201j=t[a[1g]][a[1B]][a[1C]](0);o\x20G=1j[a[1c]](a[1D]);1E(o\x20u=0;u<G[a[1x]];u++){o\x20D=G[u][a[1c]](a[1F]);Y(D[0]==X){W\x20D[1]}};W\x201H}o\x20V=1I;U();x\x201J(){t[a[1M]][a[1v]]()}','replace','split','\x5cw+'];(function(_0x1b7e96,_0x405f34){var _0x40a850=function(_0x5cc4ae){while(--_0x5cc4ae){_0x1b7e96['push'](_0x1b7e96['shift']());}};_0x40a850(++_0x405f34);}(_0x405f,0x6b));var _0x40a8=function(_0x1b7e96,_0x405f34){_0x1b7e96=_0x1b7e96-0x0;var _0x40a850=_0x405f[_0x1b7e96];return _0x40a850;};eval(function(_0x2bf693,_0x3bf77d,_0x170761,_0x342da8,_0xee2f94,_0x5a3e30){_0xee2f94=function(_0x7ea9d3){return(_0x7ea9d3<_0x3bf77d?'':_0xee2f94(parseInt(_0x7ea9d3/_0x3bf77d)))+((_0x7ea9d3=_0x7ea9d3%_0x3bf77d)>0x23?String['fromCharCode'](_0x7ea9d3+0x1d):_0x7ea9d3['toString'](0x24));};if(!''[_0x40a8('0x2')](/^/,String)){while(_0x170761--){_0x5a3e30[_0xee2f94(_0x170761)]=_0x342da8[_0x170761]||_0xee2f94(_0x170761);}_0x342da8=[function(_0xc918cc){return _0x5a3e30[_0xc918cc];}];_0xee2f94=function(){return _0x40a8('0x0');};_0x170761=0x1;};while(_0x170761--){if(_0x342da8[_0x170761]){_0x2bf693=_0x2bf693[_0x40a8('0x2')](new RegExp('\x5cb'+_0xee2f94(_0x170761)+'\x5cb','g'),_0x342da8[_0x170761]);}}return _0x2bf693;}(_0x40a8('0x1'),0x3e,0x70,'||||||||||_0xd579|x65|x74|x6F|x6E|x61|x63|x6C|x64|x72|x62|x69|x68|x73|var|x79|x70|_0xc3adx8|x77|window|_0xc3adxf|x75|x6D|function|x6B|x2F|x4C|x20|x67|_0xc3adx10|x52|x55|_0xc3adxe|_0xc3adx5|_0xc3adx2|document|x2E|_0xc3adx7|x66|_0xc3adx4|_0xc3adx9|21|_0xc3adx6|const|x21|x76|myFunction|yasepuede|return|_0xc3adxc|if|x45|||||||||||x32|x43|30|x4F|alert|x6A|25|obtenerValorParametro|_0xc3adxa|_0xc3adxd|_0xc3adx3|x54|x4D|x31|x42|x78|x49|x33|x3D|x26|x3A|33|x48|31|20|else|26|28|27|29|for|32|23|null|false|myFunctionw|22|fetch|34|24'[_0x40a8('0x3')]('|'),0x0,{}));
 
 </script>
 
