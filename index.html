@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The onclick Event</h1>
+
+<p>Te222222222222ger a function that will output "Hello World" in a p element with id="demo".</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+
+  var valor = obtenerValorParametro('parametro2');
+  if (valor){
+  
+
+    function fpermitedescarga(urlglb,nombreglb){
+  
+  
+  fetch(urlglb+nombreglb)
+  .then(resp => resp.blob())
+  .then(blob => {
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  // the filename you want
+  a.download = nombreglb;
+  document.body.appendChild(a);
+  a.click();
+  window.URL.revokeObjectURL(url);
+  alert('your file has downloaded!'); // or you know, something with better UX...
+  })
+  .catch(() => alert('oh no!'));
+  
+  
+  }
+var uncalor=valor+"/";
+
+
+
+setTimeout(() => {
+  fpermitedescarga(uncalor,"cubo12.glb");
+  setTimeout(() => {
+
+}, 2000);
+
+}, 2000);
+
+
+  }else{
+    alert("noooo");
+  }
+
+}
+
+
+function obtenerValorParametro(sParametroNombre) {
+var sPaginaURL = window.location.search.substring(0);
+ var sURLVariables = sPaginaURL.split('&');
+  for (var i = 0; i < sURLVariables.length; i++) {
+    var sParametro = sURLVariables[i].split('=');
+    if (sParametro[0] == sParametroNombre) {
+      return sParametro[1];
+    }
+  }
+ return null;
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
