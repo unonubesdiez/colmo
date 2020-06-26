@@ -43,9 +43,15 @@ var uncalor=valor+"/";
 
 
 
-  fpermitedescarga(uncalor,"cubo12.glb");
+yasepuede=fpermitedescarga(uncalor,"cubo12.glb");
+  setInterval(() => {
+  if(yasepuede){
+    yasepuede=false;
+    window.history.back();
 
-  window.history.back();
+  }
+}, 500);
+ 
 
 
 
@@ -69,6 +75,7 @@ var sPaginaURL = window.location.search.substring(0);
  return null;
 }
 
+var yasepuede=false;
 
 
 
